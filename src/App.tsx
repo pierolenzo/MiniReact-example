@@ -14,12 +14,13 @@ function App() {
   //Attenzione a quante volte viene renderizzato il componente
   console.log('render', opened);
 
-  const cls = opened ? 'menu-open opened' : 'menu-open';
- 
+  //const cls = opened ? 'menu-open opened' : 'menu-open';
+  //const cls = cn('menu-open', {'opened': opened})
+
   return (
   <div>
     <nav className="menu">
-      <div className={cls}/>
+      <div className={cn('menu-open', {'opened': opened})}/>
       <label className="menu-open-button" onClick={toggle}>
         <span className="hamburger hamburger-1"></span>
         <span className="hamburger hamburger-2"></span>
