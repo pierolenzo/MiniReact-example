@@ -1,13 +1,26 @@
-import React from "react";
+import cn from "classnames";
+import React, { useState } from "react";
 
 import "./App.css";
 
 function App() {
+  
+  const [opened, setOpened] = useState<boolean>(false)
+  
+  const toggle = () => {
+    setOpened(!opened)
+  }
+
+  //Attenzione a quante volte viene renderizzato il componente
+  console.log('render', opened);
+
+  const cls = opened ? 'menu-open opened' : 'menu-open';
+ 
   return (
   <div>
     <nav className="menu">
-      <div className="menu-open opened"/>
-      <label className="menu-open-button" htmlFor="menu-open">
+      <div className={cls}/>
+      <label className="menu-open-button" onClick={toggle}>
         <span className="hamburger hamburger-1"></span>
         <span className="hamburger hamburger-2"></span>
         <span className="hamburger hamburger-3"></span>
