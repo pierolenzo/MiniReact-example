@@ -1,34 +1,48 @@
 import React from "react";
-import { Empty } from "./Components/Empty";
-import { Products } from "./Components/Products";
+
 import "./App.css";
 
 function App() {
-  const products: number = 12;
-  const gender: string = "M";
-  const wrpperClass: string = gender === "M" ? "centered male" : "centered female";
-  const styles: React.CSSProperties = gender === 'M' ? { color: 'white', padding: 10 } : { padding: 20 };
-
   return (
-    //Fragment è un elemento non renderizzato dal browser che usiamo
-    // per creare un wrap necessario a React (che vuole sempre un nodo padre).
-    //Si può usare anche "<> </>" (tag vuoti).
-    <React.Fragment>
-      {/* style deve contenere un oggetto { color: "black"} */}
-      <div className={wrpperClass} style={{ color: "black" }}>
+  <div>
+    <nav className="menu">
+      <div className="menu-open opened"/>
+      <label className="menu-open-button" htmlFor="menu-open">
+        <span className="hamburger hamburger-1"></span>
+        <span className="hamburger hamburger-2"></span>
+        <span className="hamburger hamburger-3"></span>
+      </label>
+      
+      <div className="menu-item"> <i className="fa fa-bar-chart"></i> </div>
+      <div className="menu-item"> <i className="fa fa-plus"></i> </div>
+      <div className="menu-item"> <i className="fa fa-heart"></i> </div>
+      <div className="menu-item"> <i className="fa fa-envelope"></i> </div>
+      <div className="menu-item"> <i className="fa fa-cog"></i> </div>
+      <div className="menu-item"> <i className="fa fa-ellipsis-h"></i> </div>
+      
+    </nav>
 
-        <div style={styles}>You are {gender === "M" ? "male" : "female"} </div>
+    {/* <!-- filters --> */}
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="shadowed-goo">
 
-        <Empty />
-
-        <button className="btn btn-primary">
-          <i className="fa fa-times"></i>
-        </button>
-
-        <Products value={products} />
-
-      </div>
-    </React.Fragment>
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+              <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+              <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+              <feComposite in2="shadow" in="goo" result="goo" />
+              <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+          <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+        </defs>
+    </svg>
+  </div>
   );
 }
 
