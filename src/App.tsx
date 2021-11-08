@@ -1,7 +1,14 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import "./App.css";
 import { AnimatedHamburger, Item } from "./Components/AnimatedHamburger";
+import { CatalogPage } from "./pages/CatalogPage";
+import { ContactsPage } from "./pages/ContactsPage";
 import { HomePage } from "./pages/HomePage";
 
 function App() {
@@ -17,16 +24,22 @@ function App() {
   console.log('render', items)
 
   const goTo = (url: string): void => {
-    window.open(url);
+    window.location.href = url;
   };
 
   return (
     <div>
-      <HomePage />
       <AnimatedHamburger 
         items={items} 
         onIconClick={goTo}
       />
+      <Router>
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/contact" element={<ContactsPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

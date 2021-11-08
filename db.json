@@ -1,10 +1,10 @@
 {
     "config": [
-        { "icon": "fa fa-google", "data": "https://www.google.com" },
-        { "icon": "fa fa-windows", "data": "https://www.microsoft.com" },
-        { "icon": "fa fa-facebook", "data": "https://www.facebook.com" },
-        { "icon": "fa fa-linkedin", "data": "https://www.linkedin.com" },
-        { "icon": "fa fa-instagram", "data": "https://www.instagram.com" },
-        { "icon": "fa fa-youtube", "data": "https://www.youtube.com" }
+        { "icon": "fa fa-google", "url": "home" },
+        { "icon": "fa fa-windows", "url": "catalog" },
+        { "icon": "fa fa-facebook", "url": "contact" },
+        { "icon": "fa fa-linkedin", "url": "home" },
+        { "icon": "fa fa-instagram", "url": "catalog" },
+        { "icon": "fa fa-youtube", "url": "contact" }
     ]
 }

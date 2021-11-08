@@ -8,7 +8,10 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -22,7 +25,8 @@ h1 {
   filter: url("#goo");
 }
 
-.menu-item, .menu-open-button {
+.menu-item,
+.menu-open-button {
   background: #e91e63;
   border-radius: 100%;
   width: 80px;
@@ -163,4 +167,40 @@ h1 {
 .menu-open.opened ~ .menu-item:nth-child(9) {
   transition-duration: 780ms;
   transform: translate3d(-0.25084px, -104.9997px, 0);
+}
+
+/*
+* Modale
+*
+*/
+
+.page {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-wrapper {
+  color: #222;
+  width: 50vw;
+  height: 50vh;
+  min-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  align-self: center;
+  overflow-y: auto;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5), 0 15px 40px rgba(166, 173, 201, 0.52);
+}
+
+.page-wrapper .close-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2em;
 }
