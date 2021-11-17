@@ -6,7 +6,7 @@ import {
   Route
 } from "react-router-dom";
 import "./App.css";
-import { AnimatedHamburger, Item } from "./Components/AnimatedHamburger";
+import { AnimatedHamburger, Item } from "./shared/AnimatedHamburger";
 import { CatalogPage } from "./pages/CatalogPage";
 import { ContactsPage } from "./pages/ContactsPage";
 import { HomePage } from "./pages/HomePage";
