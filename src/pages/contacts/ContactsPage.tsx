@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { MapQuest } from '../shared/MapQuest'
+import { MapQuest } from '../../shared/MapQuest'
 
 export const ContactsPage: React.FC  = () => {
     return (
@@ -8,11 +8,11 @@ export const ContactsPage: React.FC  = () => {
             <div className="page-wrapper">
                 <h2 className="title">Contacts Page</h2>
 
-                <MapQuest city="Messina" 
+                <MapQuest city="Roma" 
                     width={300} 
                     height={200}
                     onClick={() => console.log('map link')}
-                    ></MapQuest>
+                />
 
                 <NavLink to="/">
                     <i className="fa fa-times close-button"/>

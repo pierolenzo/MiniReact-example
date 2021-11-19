@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import { AnimatedHamburger, Item } from "./shared/AnimatedHamburger";
-import { CatalogPage } from "./pages/CatalogPage";
-import { ContactsPage } from "./pages/ContactsPage";
-import { HomePage } from "./pages/HomePage";
+import { CatalogPage } from "./pages/catalog/CatalogPage";
+import { ContactsPage } from "./pages/contacts/ContactsPage";
+import { HomePage } from "./pages/home/HomePage";
 
 function App() {
   const [items, setItems] = useState<Item[]>([])
@@ -21,7 +21,7 @@ function App() {
     })
   }, [])
   
-  console.log('render', items)
+  //console.log('render', items)
 
   const goTo = (url: string): void => {
     window.location.href = url;

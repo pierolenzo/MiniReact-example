@@ -7,10 +7,11 @@ interface MapQuestProps {
     city: string;
 }
 
+// Intersection type all tag attribute
 export const MapQuest: React.FC<MapQuestProps & React.ImgHTMLAttributes<HTMLImageElement>> = ({ 
     city,
-    width,
-    height,
+    width="200",
+    height="200",
     alt,
     ...rest
 }) => {
