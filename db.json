@@ -1,11 +1,8 @@
 {
     "config": [
-        { "icon": "fa fa-google", "url": "home" },
-        { "icon": "fa fa-windows", "url": "catalog" },
-        { "icon": "fa fa-facebook", "url": "contact" },
-        { "icon": "fa fa-linkedin", "url": "home" },
-        { "icon": "fa fa-instagram", "url": "catalog" },
-        { "icon": "fa fa-youtube", "url": "contact" }
+        { "icon": "fa fa-home", "url": "home" },
+        { "icon": "fa fa-book", "url": "catalog" },
+        { "icon": "fa fa-address-book", "url": "contact" }
     ],
     "catalog": [
         {
