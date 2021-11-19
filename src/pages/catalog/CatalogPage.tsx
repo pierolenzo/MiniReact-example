@@ -1,16 +1,11 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { CatalogList } from "./components/CatalogList";
-import { CatalogItem } from "./model/catalog-item";
+import { useCatalog } from "./hooks/useCatalog";
 
 export const CatalogPage: React.FC = () => {
-  const [catalog, setCatalog] = useState<CatalogItem[]>([]);
 
-  useEffect(() => {
-    axios.get("http://localhost:3001/catalog")
-        .then((res) => setCatalog(res.data));
-  }, []);
+  const catalog = useCatalog();
 
   return (
     <div className="page">
