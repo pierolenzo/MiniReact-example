@@ -1,5 +1,4 @@
 import React from 'react'
-import { MapQuest } from '../../../shared/MapQuest';
 import { CatalogItem } from '../model/catalog-item';
 import { CatalogListItem } from './CatalogListItem';
 

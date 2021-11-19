@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { MapQuest } from "../../shared/MapQuest";
 import { CatalogList } from "./components/CatalogList";
 import { CatalogItem } from "./model/catalog-item";
 
